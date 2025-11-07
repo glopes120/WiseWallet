@@ -1,0 +1,113 @@
+
+/* N26-inspired Design System */
+
+:root {
+  /* Primary Colors */
+  --n26-green: #2b697a; /* N26 Paradiso / Petrol green */
+  --n26-black: #121212; /* Cod Gray for softer black */
+  --n26-white: #ffffff;
+
+  /* Secondary Colors */
+  --n26-light-gray: #f5f5f5; /* Light gray for backgrounds/borders */
+  --n26-dark-gray: #333333; /* Darker gray for text */
+  --n26-red: #e53e3e; /* For error messages, etc. */
+
+  /* Typography */
+  --n26-font-family-primary: 'Inter', sans-serif;
+  --n26-font-family-secondary: 'Poppins', sans-serif;
+  --n26-font-size-base: 16px;
+  --n26-line-height-base: 1.5;
+
+  /* Spacing */
+  --n26-spacing-xs: 4px;
+  --n26-spacing-s: 8px;
+  --n26-spacing-m: 16px;
+  --n26-spacing-l: 24px;
+  --n26-spacing-xl: 32px;
+
+  /* Borders */
+  --n26-border-radius: 8px;
+  --n26-border-width: 1px;
+  --n26-border-color: var(--n26-light-gray);
+
+  /* Shadows */
+  --n26-shadow-s: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --n26-shadow-m: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; /* Global transition */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--n26-font-family-primary);
+  font-size: var(--n26-font-size-base);
+  line-height: var(--n26-line-height-base);
+  background-color: var(--n26-light-gray); /* Using light gray for background */
+  color: var(--n26-dark-gray);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Links */
+a {
+  color: var(--n26-green);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #218a82; /* A slightly darker shade of N26 green for hover */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--n26-font-family-secondary); /* Poppins for headings */
+  font-weight: 600;
+  color: var(--n26-black);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--n26-spacing-m);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

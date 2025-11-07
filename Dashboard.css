@@ -1,0 +1,140 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--n26-light-gray); /* Use consistent light gray background */
+}
+
+.main-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: var(--n26-spacing-l); /* Consistent padding around the main content */
+}
+
+.dashboard-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Main content takes remaining space, side content fixed 300px */
+    gap: var(--n26-spacing-l); /* Gap between columns */
+    padding: 0; /* Remove padding here as main-content already has it */
+    margin-top: var(--n26-spacing-l); /* Add space below header */
+}
+
+.main-charts-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--n26-spacing-l);
+}
+
+.side-content-area {
+    display: flex;
+    flex-direction: column;
+    gap: var(--n26-spacing-l);
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    padding: var(--n26-spacing-m);
+    background-color: var(--n26-white);
+    border-bottom: var(--n26-border-width) solid var(--n26-border-color);
+    margin-bottom: var(--n26-spacing-m);
+    border-radius: var(--n26-border-radius);
+    box-shadow: var(--n26-shadow-s);
+}
+
+.dashboard-header .dashboard-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-right: var(--n26-spacing-m);
+}
+
+.dashboard-header h2 {
+    font-family: var(--n26-font-family-secondary);
+    font-size: 1.2rem;
+    color: var(--n26-black);
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Vertically align items */
+    background-color: var(--n26-white);
+    border-top: var(--n26-border-width) solid var(--n26-border-color);
+    padding: var(--n26-spacing-m) 0;
+    position: relative;
+    box-shadow: var(--n26-shadow-s); /* Add a subtle shadow to the nav */
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    color: var(--n26-dark-gray);
+    font-size: 0.95rem; /* Slightly increased font size */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--n26-spacing-xs);
+    transition: color 0.2s ease, transform 0.5s ease; /* Increased transform transition duration */
+    font-family: var(--n26-font-family-primary); /* Use primary font */
+    flex-grow: 1; /* Make buttons take equal space */
+    padding: var(--n26-spacing-s) 0; /* Add vertical padding */
+    border-right: 1px solid var(--n26-light-gray); /* Column separator */
+}
+
+.bottom-nav button:last-child {
+    border-right: none; /* No border for the last item */
+}
+
+.bottom-nav button.active {
+    color: var(--n26-green); /* Use N26 green for active state */
+}
+
+.bottom-nav button:hover {
+    color: var(--n26-black); /* Darken text on hover */
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.new-expense-button-inline {
+    color: #63783D;
+    font-size: 0.95rem; /* Match other buttons */
+    font-weight: normal; /* Match other buttons */
+    transition: color 0.2s ease, transform 0.5s ease;
+}
+
+
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); } /* Reduced bounce height */
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--n26-spacing-m);
+    margin-left: auto; /* Pushes the month selector to the right */
+}
+
+.month-selector button {
+    background: none;
+    border: 1px solid var(--n26-border-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.month-selector button:hover {
+    background-color: var(--n26-light-gray);
+}
+
+.month-selector span {
+    font-weight: 600;
+    font-size: 1rem;
+}

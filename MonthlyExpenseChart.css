@@ -1,0 +1,27 @@
+.monthly-expense-chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 20px; /* Add top margin for gap */
+  width: 100%; /* Ensure it takes full width */
+  height: 600px; /* Fixed height */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+}
+
+.monthly-expense-chart h3 {
+  margin-top: 0; /* Remove top margin */
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+
+.monthly-expense-chart canvas {
+  max-height: 100%;
+  max-width: 100%;
+}

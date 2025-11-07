@@ -1,0 +1,48 @@
+
+.recent-expenses-container {
+    background-color: var(--n26-white);
+    padding: var(--n26-spacing-l);
+    border-radius: var(--n26-border-radius);
+    box-shadow: var(--n26-shadow-s);
+}
+
+.recent-expenses-container h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--n26-spacing-m);
+}
+
+.recent-expenses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--n26-spacing-m) 0;
+    border-bottom: 1px solid var(--n26-light-gray);
+}
+
+.recent-expense-item:last-child {
+    border-bottom: none;
+}
+
+.recent-expense-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-expense-description {
+    font-weight: 500;
+}
+
+.recent-expense-category {
+    font-size: 0.875rem;
+    color: var(--n26-dark-gray);
+}
+
+.recent-expense-amount {
+    font-weight: 600;
+}
